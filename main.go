@@ -25,7 +25,7 @@ func main() {
 
 	if originUnit == "C" {
 		convertToFahrenheit(originValue)
-	} else if originUnit == "F" {
+	} else {
 		convertToCelsius(originValue)
 	}
 
