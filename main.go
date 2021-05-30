@@ -22,14 +22,16 @@ func main() {
 		printError(errInvalidArguments)
 	}
 	originUnit = strings.ToUpper(os.Args[1])
+
 	if originUnit == "C" {
-		convertToFahrenheit(originUnit)
+		convertToFahrenheit(originValue)
 	} else if originUnit == "F" {
-		convertToCelsius(originUnit)
+		convertToCelsius(originValue)
 	}
+
 	for {
 		fmt.Print("What is the current temperature in " + originUnit + " ? ")
-		_, err := fmt.Scanln(&originUnit)
+		_, err := fmt.Scanln(&originValue)
 		if err != nil {
 			printError(errReadingInput)
 		}
